@@ -1,9 +1,7 @@
 package com.mari.moviereviews.services;
 
-import com.mari.moviereviews.domain.Review;
 import com.mari.moviereviews.domain.User;
 import com.mari.moviereviews.dto.UserDTO;
-import com.mari.moviereviews.repository.ReviewRepository;
 import com.mari.moviereviews.repository.UserRepository;
 import com.mari.moviereviews.services.exception.ObjectNotFoundException;
 import com.mari.moviereviews.services.exception.UnavailableUsernameException;
@@ -18,9 +16,6 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
-
-    @Autowired
-    private ReviewRepository reviewRepository;
 
     public List<User> findAll() {
         return userRepository.findAll();
